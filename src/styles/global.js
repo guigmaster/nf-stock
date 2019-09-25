@@ -15,14 +15,12 @@ export default createGlobalStyle`
   }
 
   body {
-    font-family: Roboto, Arial, Helvetica, sans-serif;
     -webkit--font-smoothing: antialiased !important;
   }
 
-  input, button {
-    font-size: 14px;
+  body, input, button {
+    font: 14px Roboto, Arial, Helvetica, sans-serif;
     color: #222;
-    font-family: Arial, Helvetica, sans-serif;
   }
 
   button, a {
