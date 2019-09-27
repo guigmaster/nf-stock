@@ -36,4 +36,8 @@ export default createGlobalStyle`
     border: none;
   }
 
+  iframe, img {
+    max-width: 100%;
+    height: auto;
+  }
 `;
