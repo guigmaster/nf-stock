@@ -5,6 +5,7 @@ import React from 'react';
 import Header from '../../components/Header';
 import Slider from '../../components/Slider';
 import SectionPlan from '../../components/SectionPlan';
+import Testimonials from '../../components/Testimonials';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Header />
       <Slider />
       <SectionPlan />
+      <Testimonials />
     </div>
   );
 }
