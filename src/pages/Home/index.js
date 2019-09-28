@@ -7,6 +7,7 @@ import Slider from '../../components/Slider';
 import SectionPlan from '../../components/SectionPlan';
 import Testimonials from '../../components/Testimonials';
 import Contact from '../../components/Contact';
+import Footer from '../../components/Footer';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <SectionPlan />
       <Testimonials />
       <Contact />
+      <Footer />
     </div>
   );
 }
