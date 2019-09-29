@@ -14,6 +14,7 @@ export const Container = styled.footer`
 `;
 
 export const Copy = styled.span`
+  text-align: center;
   font-weight: 300;
   font-size: 18px;
 `;
