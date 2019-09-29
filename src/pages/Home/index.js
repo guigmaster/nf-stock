@@ -1,6 +1,6 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import { Container } from './styles';
 
 import Header from '../../components/Header';
 import Slider from '../../components/Slider';
@@ -11,13 +11,13 @@ import Footer from '../../components/Footer';
 
 export default function Home() {
   return (
-    <div>
+    <Container>
       <Header />
       <Slider />
       <SectionPlan />
       <Testimonials />
       <Contact />
       <Footer />
-    </div>
+    </Container>
   );
 }
