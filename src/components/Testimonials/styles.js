@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { BaseWrapper, BaseContainer } from '../../styles/common';
+import { BaseWrapper, BaseContainer, BaseTitle } from '../../styles/common';
 
 export const Wrapper = styled(BaseWrapper)`
   padding: 20px 0 50px;
@@ -8,10 +8,7 @@ export const Wrapper = styled(BaseWrapper)`
 
 export const Container = styled(BaseContainer)``;
 
-export const Title = styled.h1`
-  text-align: center;
-  font-size: 24px;
-  color: #515c65;
+export const Title = styled(BaseTitle)`
   margin-bottom: 20px;
 `;
 

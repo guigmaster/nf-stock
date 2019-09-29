@@ -12,3 +12,10 @@ export const BaseContainer = styled.div`
   flex-direction: column;
   align-items: center;
 `;
+
+export const BaseTitle = styled.h1`
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  color: #515c65;
+`;
