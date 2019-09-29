@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container, Wrapper, Title, Subtitle, Plans } from './styles';
 
-import Plan from '../Plan';
+import Plan from './Plan';
 
 export default function SectionPlan() {
   const plansList = [
