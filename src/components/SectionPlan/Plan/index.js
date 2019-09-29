@@ -9,7 +9,7 @@ export default function Plan({ type, name, description, value }) {
       <Title type={type}>{name}</Title>
       <Description>{description}</Description>
       <Price>{value}</Price>
-      <Button to="/">Contratar</Button>
+      <Button to={`/sign?plan=${type}`}>Contratar</Button>
     </Container>
   );
 }

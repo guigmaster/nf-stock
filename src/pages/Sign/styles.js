@@ -1,15 +1,19 @@
 import styled from 'styled-components';
+import { darken } from 'polished';
 import { Form as BaseForm } from '@rocketseat/unform';
 
 import colors from '../../styles/colors';
 
 export const Container = styled.div`
   height: 100%;
+  display: flex;
   position: relative;
+  flex-direction: column;
   background-color: ${colors.ligther};
 `;
 
 export const Content = styled.div`
+  flex: 1;
   margin-top: 50px;
 `;
 
@@ -23,6 +27,10 @@ export const Button = styled.button`
   color: ${colors.white};
   margin: 0 10px;
   background-color: ${colors.success};
+
+  &:hover {
+    background-color: ${darken(0.2, colors.success)};
+  }
 `;
 
 export const Form = styled(BaseForm)`

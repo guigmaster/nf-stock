@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+import querystring from 'querystring';
 import React, { useState } from 'react';
 import * as Yup from 'yup';
 
@@ -7,10 +9,11 @@ import TextInput from '../../components/form/TextInput';
 import SelectInput from '../../components/form/SelectInput';
 
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 import firebase from '../../services/firebase';
 
-export default function Sign() {
+export default function Sign({ history, location }) {
   const [errorMessage, setErrorMessage] = useState('');
 
   const options = [
@@ -27,6 +30,15 @@ export default function Sign() {
       title: 'Unlimited',
     },
   ];
+
+  const qs = querystring.parse(location.search.replace('?', ''));
+
+  const initialData = {
+    name: '',
+    email: '',
+    password: '',
+    plan: (qs && qs.plan) || '',
+  };
 
   const schema = Yup.object().shape({
     name: Yup.string().required('Nome é obrigatório'),
@@ -46,7 +58,9 @@ export default function Sign() {
 
       await firebase.register(name, email, password);
       await firebase.setPlanData({ name, email, plan });
+
       resetForm();
+      history.replace('/congratulations');
     } catch (error) {
       setErrorMessage('E-mail já cadastrado!');
     }
@@ -56,7 +70,7 @@ export default function Sign() {
     <Container>
       <Header />
       <Content>
-        <Form schema={schema} onSubmit={handleSubmit}>
+        <Form schema={schema} onSubmit={handleSubmit} initialData={initialData}>
           <TextInput label="Nome Completo" name="name" />
           <TextInput label="E-mail" name="email" />
           <TextInput label="Senha" name="password" type="password" />
@@ -65,6 +79,7 @@ export default function Sign() {
           <Button>Contratar</Button>
         </Form>
       </Content>
+      <Footer />
     </Container>
   );
 }
