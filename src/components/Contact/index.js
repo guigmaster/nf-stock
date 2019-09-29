@@ -11,7 +11,7 @@ import {
 
 export default function Contact() {
   return (
-    <Wrapper>
+    <Wrapper id="contact">
       <Container>
         <Title>
           Entre em contato com a Alterdata e solicite uma demonstração

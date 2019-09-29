@@ -8,9 +8,14 @@ import {
   NavAuth,
   Navigation,
   Wrapper,
+  NavLink,
 } from './styles';
 
 export default function Header() {
+  const handleClick = id => {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <Wrapper>
       <Container>
@@ -22,17 +27,19 @@ export default function Header() {
         </NavAuth>
 
         <Navigation>
+          {/* <li>
+            <a href="#t">O que fazemos</a>
+          </li> */}
           <li>
-            <Link to="/">O que fazemos</Link>
+            <NavLink onClick={() => handleClick('plans')}>Planos</NavLink>
           </li>
           <li>
-            <Link to="/">Planos</Link>
+            <NavLink onClick={() => handleClick('testimonials')}>
+              Depoimentos
+            </NavLink>
           </li>
           <li>
-            <Link to="/">Depoimentos</Link>
-          </li>
-          <li>
-            <Link to="/">Contato</Link>
+            <NavLink onClick={() => handleClick('contact')}>Contato</NavLink>
           </li>
         </Navigation>
       </Container>

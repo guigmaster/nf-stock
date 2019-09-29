@@ -11,7 +11,7 @@ export default function Testimonials() {
   const author = 'Contabilidade Ailson Lombardi - Ailson Lombardi - MG';
 
   return (
-    <Wrapper>
+    <Wrapper id="testimonials">
       <Container>
         <Title>Veja alguns depoimentos</Title>
         <List>

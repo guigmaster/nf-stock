@@ -2,8 +2,12 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Wrapper = styled.header`
-  position: relative;
+  position: fixed;
+  top: 0;
+  z-index: 10;
   display: block;
+  width: 100%;
+  background-color: #fff;
   box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1),
     0 3px 1px 0 rgba(20, 23, 28, 0.1);
 `;
@@ -72,22 +76,6 @@ export const Navigation = styled.ul`
   width: 100%;
   padding: 15px 0;
 
-  a {
-    font-size: 11px;
-    text-transform: uppercase;
-    color: #444;
-
-    transition: opacity 0.2s ease-in-out;
-
-    &:hover {
-      opacity: 0.5;
-    }
-
-    @media (min-width: 1010px) {
-      font-size: 14px;
-    }
-  }
-
   @media (min-width: 768px) {
     width: 300px;
     justify-content: space-around;
@@ -96,5 +84,24 @@ export const Navigation = styled.ul`
   @media (min-width: 1010px) {
     max-width: 600px;
     justify-content: space-around;
+  }
+`;
+
+export const NavLink = styled.button`
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #444;
+
+  border: none;
+  background: transparent;
+
+  transition: opacity 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  @media (min-width: 1010px) {
+    font-size: 14px;
   }
 `;

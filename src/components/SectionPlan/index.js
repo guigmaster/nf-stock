@@ -27,7 +27,7 @@ export default function SectionPlan() {
   ];
 
   return (
-    <Wrapper>
+    <Wrapper id="plans">
       <Container>
         <Title>Escolha o melhor plano para você e sua empresa</Title>
         <Subtitle>Mude quando quiser</Subtitle>
