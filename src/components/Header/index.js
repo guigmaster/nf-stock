@@ -25,15 +25,12 @@ export default function Header({ hasNavigation }) {
 
         {hasNavigation && (
           <NavAuth>
-            <HireBtn to="/">Contratar</HireBtn>
+            <HireBtn to="/sign">Contratar</HireBtn>
           </NavAuth>
         )}
 
         {hasNavigation && (
           <Navigation>
-            {/* <li>
-              <a href="#t">O que fazemos</a>
-            </li> */}
             <li>
               <NavLink onClick={() => handleClick('plans')}>Planos</NavLink>
             </li>

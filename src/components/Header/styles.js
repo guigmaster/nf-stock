@@ -44,7 +44,6 @@ export const NavAuth = styled.div`
 `;
 
 export const HireBtn = styled(Link)`
-  font-weight: 600;
   font-size: 14px;
   padding: 8px;
   margin: 0 0 0 15px;
