@@ -10,6 +10,7 @@ import {
   NavLink,
 } from './styles';
 
+// eslint-disable-next-line react/prop-types
 export default function Header({ hasNavigation }) {
   const handleClick = id => {
     document
@@ -18,7 +19,7 @@ export default function Header({ hasNavigation }) {
   };
 
   return (
-    <Wrapper>
+    <Wrapper hasNavigation={hasNavigation}>
       <Container>
         <Brand to="/">NF-Stock</Brand>
 

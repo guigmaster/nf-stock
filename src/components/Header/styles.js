@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Wrapper = styled.header`
-  position: fixed;
+  position: ${props => (props.hasNavigation ? 'fixed' : 'relative')};
   top: 0;
   z-index: 10;
   display: block;
