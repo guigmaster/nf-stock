@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Container, Title, Description, Price, Button } from './styles';
 
+// eslint-disable-next-line react/prop-types
 export default function Plan({ type, name, description, value }) {
   return (
     <Container type={type}>
