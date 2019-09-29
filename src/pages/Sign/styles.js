@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
+
 import { Form as BaseForm } from '@rocketseat/unform';
+import CreditCardInput from 'react-credit-card-input';
 
 import colors from '../../styles/colors';
 
@@ -35,8 +37,9 @@ export const Button = styled.button`
 
 export const Form = styled(BaseForm)`
   display: flex;
-  flex-direction: column;
+  margin: 0 auto;
   max-width: 600px;
+  flex-direction: column;
 `;
 
 export const ErrorMessage = styled.span`
@@ -48,4 +51,8 @@ export const ErrorMessage = styled.span`
   border-radius: 4px;
   color: ${colors.white};
   background-color: ${colors.error};
+`;
+
+export const CcInput = styled(CreditCardInput)`
+  border: 1px solid ${props => (props.error ? colors.error : colors.regular)};
 `;
