@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
+import colors from '../../styles/colors';
 import { BaseWrapper, BaseContainer, BaseTitle } from '../../styles/common';
 
 export const Wrapper = styled(BaseWrapper)`
   padding: 20px;
   min-height: 150px;
-  background-color: #f5f6fd;
+  background-color: ${colors.ligther};
 `;
 
 export const Container = styled(BaseContainer)``;
@@ -17,7 +18,7 @@ export const Subtitle = styled.h2`
   margin-top: 5px;
   font-size: 20px;
   font-weight: 300;
-  color: #515c65;
+  color: ${colors.primary};
 `;
 
 export const Plans = styled.div`

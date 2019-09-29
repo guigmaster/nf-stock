@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import colors from '../../styles/colors';
 
 export const Container = styled.footer`
   display: flex;
@@ -10,11 +11,11 @@ export const Container = styled.footer`
   height: 80px;
   margin-top: 20px;
 
-  background-color: #fff;
+  background-color: ${colors.white};
 `;
 
 export const Copy = styled.span`
   text-align: center;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 14px;
 `;

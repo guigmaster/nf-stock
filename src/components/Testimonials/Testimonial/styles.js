@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import colors from '../../../styles/colors';
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -11,7 +13,7 @@ export const Container = styled.div`
   margin: 0 auto 20px;
 
   border-radius: 10px;
-  background-color: #f5f6fd;
+  background-color: ${colors.ligther};
 
   @media (min-width: 900px) {
     width: 30%;

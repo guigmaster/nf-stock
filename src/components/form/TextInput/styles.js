@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { Input as BaseInput } from '@rocketseat/unform';
 
+import colors from '../../../styles/colors';
+
 export const Container = styled.div`
   display: flex;
   width: 100%;
@@ -11,7 +13,7 @@ export const Container = styled.div`
   label {
     font-size: 13px;
     margin-bottom: 5px;
-    color: #a2b0b8;
+    color: ${colors.regular};
   }
 `;
 
@@ -24,7 +26,7 @@ export const InputWrapper = styled.div`
     margin-top: 5px;
     font-style: italic;
     font-size: 12px;
-    color: #f86969;
+    color: ${colors.error};
   }
 `;
 
@@ -33,5 +35,5 @@ export const Input = styled(BaseInput)`
   width: 100%;
   padding: 10px;
   border-radius: 4px;
-  border: 1px solid ${props => (props.error ? '#f86969' : '#ccc')};
+  border: 1px solid ${props => (props.error ? colors.error : colors.regular)};
 `;

@@ -2,18 +2,19 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 import { Link } from 'react-router-dom';
 
+import colors from '../../styles/colors';
+
 export const Container = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
-  background-color: #f5f6fd;
+  background-color: ${colors.ligther};
 `;
 
 export const Content = styled.section`
   flex: 1;
   display: block;
-  background-color: #f5f6fd;
 
   div {
     display: flex;
@@ -27,7 +28,7 @@ export const Content = styled.section`
     font-size: 32px;
     text-align: center;
     font-weight: 700;
-    color: #515c65;
+    color: ${colors.primary};
 
     span {
       display: block;
@@ -41,10 +42,11 @@ export const Button = styled(Link)`
   text-transform: uppercase;
   padding: 15px 20px;
   border-radius: 4px;
-  color: #fff;
+  color: ${colors.white};
   margin-top: 50px;
-  background-color: #5ad678;
+  background-color: ${colors.success};
+
   &:hover {
-    background-color: ${darken(0.2, '#5ad678')};
+    background-color: ${darken(0.2, colors.success)};
   }
 `;

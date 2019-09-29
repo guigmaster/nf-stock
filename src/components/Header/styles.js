@@ -1,5 +1,8 @@
 import styled from 'styled-components';
+import { darken } from 'polished';
 import { Link } from 'react-router-dom';
+
+import colors from '../../styles/colors';
 
 export const Wrapper = styled.header`
   position: ${props => (props.hasNavigation ? 'fixed' : 'relative')};
@@ -7,7 +10,7 @@ export const Wrapper = styled.header`
   z-index: 10;
   display: block;
   width: 100%;
-  background-color: #fff;
+  background-color: ${colors.white};
   box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1),
     0 3px 1px 0 rgba(20, 23, 28, 0.1);
 `;
@@ -26,7 +29,7 @@ export const Container = styled.div`
 export const Brand = styled(Link)`
   font-size: 2em;
   font-weight: 300;
-  color: #222;
+  color: ${colors.black};
   transition: opacity 0.2s ease-in-out;
 
   &:hover {
@@ -38,22 +41,6 @@ export const NavAuth = styled.div`
   @media (min-width: 768px) {
     order: 10;
   }
-
-  a {
-    font-size: 12px;
-    text-transform: uppercase;
-    color: #444;
-
-    transition: opacity 0.2s ease-in-out;
-
-    &:hover {
-      opacity: 0.5;
-    }
-
-    @media (min-width: 1010px) {
-      font-size: 14px;
-    }
-  }
 `;
 
 export const HireBtn = styled(Link)`
@@ -64,8 +51,13 @@ export const HireBtn = styled(Link)`
   border-radius: 4px;
   text-align: center;
   text-transform: uppercase;
-  color: #fff !important;
-  background-color: #0f0;
+  color: ${colors.white} !important;
+  background-color: ${colors.success};
+
+  &:hover {
+    opacity: 1;
+    background-color: ${darken(0.2, colors.success)};
+  }
 `;
 
 export const Navigation = styled.ul`
@@ -90,7 +82,7 @@ export const Navigation = styled.ul`
 export const NavLink = styled.button`
   font-size: 11px;
   text-transform: uppercase;
-  color: #444;
+  color: ${colors.regular};
 
   border: none;
   background: transparent;

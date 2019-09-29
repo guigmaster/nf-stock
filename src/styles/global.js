@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import colors from './colors';
 
 export default createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700&display=swap');
@@ -20,7 +21,7 @@ export default createGlobalStyle`
 
   body, input, button {
     font: 14px Roboto, Arial, Helvetica, sans-serif;
-    color: #222;
+    color: ${colors.black};
   }
 
   button, a {

@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
 
+import colors from '../../styles/colors';
 import { BaseWrapper, BaseContainer, BaseTitle } from '../../styles/common';
 
 export const Wrapper = styled(BaseWrapper)`
   padding: 20px;
-  background-color: #f5f6fd;
+  background-color: ${colors.ligther};
 `;
 
 export const Container = styled(BaseContainer)``;
@@ -41,7 +42,7 @@ export const ContactItem = styled.div`
   height: 140px;
   padding: 20px;
   margin-top: 20px;
-  background: #fff;
+  background: ${colors.white};
   border-radius: 4px;
   box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1),
     0 3px 1px 0 rgba(20, 23, 28, 0.1);
@@ -53,10 +54,10 @@ export const ContactItem = styled.div`
   }
 
   a {
-    color: #5e9edc;
+    color: ${colors.info};
     &:hover {
       text-decoration: underline;
-      color: ${darken(0.3, '#5e9edc')};
+      color: ${darken(0.3, colors.info)};
     }
   }
 

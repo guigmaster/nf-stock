@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { lighten } from 'polished';
+import { lighten, darken } from 'polished';
 
-const colors = {
+import colors from '../../styles/colors';
+
+const planColors = {
   1: '#ff843b',
   2: '#008fff',
   3: '#7159c1',
@@ -20,9 +22,9 @@ export const Container = styled.div`
   margin: 10px 0;
   padding: 20px 0;
 
-  background-color: #fff;
+  background-color: ${colors.white};
   border-radius: 0 0 4px 4px;
-  border-top: 7px solid ${props => colors[props.type]};
+  border-top: 7px solid ${props => planColors[props.type]};
 
   box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1),
     0 3px 1px 0 rgba(20, 23, 28, 0.1);
@@ -35,7 +37,7 @@ export const Container = styled.div`
 export const Title = styled.h1`
   font-size: 20px;
   text-transform: uppercase;
-  color: ${props => lighten(0.1, colors[props.type])};
+  color: ${props => lighten(0.1, planColors[props.type])};
 `;
 
 export const Description = styled.p`
@@ -53,6 +55,10 @@ export const Button = styled(Link)`
   border-radius: 4px;
   padding: 10px 15px;
   text-transform: uppercase;
-  color: #fff;
-  background: #0f0;
+  color: ${colors.white};
+  background-color: ${colors.success};
+
+  &:hover {
+    background-color: ${darken(0.2, colors.success)};
+  }
 `;

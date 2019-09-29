@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 import { Form as BaseForm } from '@rocketseat/unform';
 
+import colors from '../../styles/colors';
+
 export const Container = styled.div`
   height: 100%;
   position: relative;
-  background-color: #f5f6fd;
+  background-color: ${colors.ligther};
 `;
 
 export const Content = styled.div`
@@ -18,9 +20,9 @@ export const Button = styled.button`
   text-transform: uppercase;
   border: none;
   border-radius: 4px;
-  color: #fff;
+  color: ${colors.white};
   margin: 0 10px;
-  background-color: #5ad678;
+  background-color: ${colors.success};
 `;
 
 export const Form = styled(BaseForm)`
@@ -36,6 +38,6 @@ export const ErrorMessage = styled.span`
   margin: 8px auto;
   padding: 8px;
   border-radius: 4px;
-  color: #fff;
-  background-color: #f86969;
+  color: ${colors.white};
+  background-color: ${colors.error};
 `;
