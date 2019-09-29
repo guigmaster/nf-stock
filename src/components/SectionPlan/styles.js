@@ -1,19 +1,14 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.section`
-  position: relative;
-  display: block;
+import { BaseWrapper, BaseContainer } from '../../styles/common';
+
+export const Wrapper = styled(BaseWrapper)`
   padding: 20px;
   min-height: 150px;
   background-color: #f5f6fd;
 `;
 
-export const Container = styled.div`
-  display: flex;
-  max-width: 1440px;
-  flex-direction: column;
-  align-items: center;
-`;
+export const Container = styled(BaseContainer)``;
 
 export const Title = styled.h1`
   text-align: center;

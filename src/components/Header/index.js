@@ -13,7 +13,9 @@ import {
 
 export default function Header() {
   const handleClick = id => {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    document
+      .getElementById(id)
+      .scrollIntoView({ block: 'start', behavior: 'smooth' });
   };
 
   return (
