@@ -28,3 +28,14 @@ export const Form = styled(BaseForm)`
   flex-direction: column;
   max-width: 600px;
 `;
+
+export const ErrorMessage = styled.span`
+  display: block;
+  width: calc(100% - 20px);
+  font-size: 14px;
+  margin: 8px auto;
+  padding: 8px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #f86969;
+`;
