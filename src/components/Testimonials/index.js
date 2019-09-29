@@ -15,7 +15,8 @@ export default function Testimonials() {
       <Container>
         <Title>Veja alguns depoimentos</Title>
         <List>
-          {[...Array(3)].map(i => (
+          {[...Array(3)].map((_, i) => (
+            // eslint-disable-next-line react/no-array-index-key
             <Testimonial key={i} quote={quote} author={author} />
           ))}
         </List>
