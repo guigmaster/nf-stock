@@ -6,9 +6,9 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import './styles.css';
 
-import slide1 from '../../assets/images/slide-001.jpg';
-import slide2 from '../../assets/images/slide-002.jpg';
-import slide3 from '../../assets/images/slide-003.jpg';
+import slide1 from '../../../assets/images/slide-001.jpg';
+import slide2 from '../../../assets/images/slide-002.jpg';
+import slide3 from '../../../assets/images/slide-003.jpg';
 
 export default function Slider() {
   const settings = {

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import colors from '../../styles/colors';
-import { BaseWrapper, BaseContainer, BaseTitle } from '../../styles/common';
+import colors from '../../../styles/colors';
+import { BaseWrapper, BaseContainer, BaseTitle } from '../../../styles/common';
 
 export const Wrapper = styled(BaseWrapper)`
   padding: 20px;

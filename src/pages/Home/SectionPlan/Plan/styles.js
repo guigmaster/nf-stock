@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { lighten, darken } from 'polished';
 
-import colors from '../../../styles/colors';
+import colors from '../../../../styles/colors';
 
 const planColors = {
   1: '#ff843b',

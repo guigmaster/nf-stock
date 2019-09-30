@@ -3,11 +3,12 @@ import React from 'react';
 import { Container } from './styles';
 
 import Header from '../../components/Header';
-import Slider from '../../components/Slider';
-import SectionPlan from '../../components/SectionPlan';
-import Testimonials from '../../components/Testimonials';
-import Contact from '../../components/Contact';
 import Footer from '../../components/Footer';
+
+import Slider from './Slider';
+import SectionPlan from './SectionPlan';
+import Testimonials from './Testimonials';
+import Contact from './Contact';
 
 export default function Home() {
   return (
