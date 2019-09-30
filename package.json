@@ -1,6 +1,6 @@
 {
   "name": "nf-stock",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@rocketseat/unform": "^1.6.1",
@@ -20,7 +20,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "react-scripts build",
+    "deploy": "firebase deploy"
   },
   "browserslist": {
     "production": [
@@ -44,6 +46,7 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "firebase-tools": "^7.4.0",
     "prettier": "^1.18.2"
   }
 }
