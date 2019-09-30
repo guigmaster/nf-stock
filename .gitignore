@@ -19,6 +19,10 @@
 .env*
 !.env.example
 
+# firebase
+.firebase/
+.firebaserc
+
 
 npm-debug.log*
 yarn-debug.log*
